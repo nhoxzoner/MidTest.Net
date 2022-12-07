@@ -16,6 +16,7 @@ namespace MidTest.Net.Data
         [Key]
         public int IdCauThu { get; set; }
         [DisplayName("Số bàn thắng")]
+        [Range(0, 20)]
         public int? SoBanThang { get; set; }
 
         [ForeignKey(nameof(IdCauThu))]
