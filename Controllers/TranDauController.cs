@@ -48,8 +48,8 @@ namespace MidTest.Net.Controllers
         // GET: TranDau/Create
         public IActionResult Create()
         {
-            ViewData["DoiBongA"] = new SelectList(_context.DoiBong, "Id", "Id");
-            ViewData["DoiBongB"] = new SelectList(_context.DoiBong, "Id", "Id");
+            ViewData["DoiBongA"] = new SelectList(_context.DoiBong, "Id", "TenDoi");
+            ViewData["DoiBongB"] = new SelectList(_context.DoiBong, "Id", "TenDoi");
             return View();
         }
 
@@ -66,8 +66,8 @@ namespace MidTest.Net.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DoiBongA"] = new SelectList(_context.DoiBong, "Id", "Id", tranDau.DoiBongA);
-            ViewData["DoiBongB"] = new SelectList(_context.DoiBong, "Id", "Id", tranDau.DoiBongB);
+            ViewData["DoiBongA"] = new SelectList(_context.DoiBong, "Id", "TenDoi", tranDau.DoiBongA);
+            ViewData["DoiBongB"] = new SelectList(_context.DoiBong, "Id", "TenDoi", tranDau.DoiBongB);
             return View(tranDau);
         }
 
@@ -84,8 +84,8 @@ namespace MidTest.Net.Controllers
             {
                 return NotFound();
             }
-            ViewData["DoiBongA"] = new SelectList(_context.DoiBong, "Id", "Id", tranDau.DoiBongA);
-            ViewData["DoiBongB"] = new SelectList(_context.DoiBong, "Id", "Id", tranDau.DoiBongB);
+            ViewData["DoiBongA"] = new SelectList(_context.DoiBong, "Id", "TenDoi", tranDau.DoiBongA);
+            ViewData["DoiBongB"] = new SelectList(_context.DoiBong, "Id", "TenDoi", tranDau.DoiBongB);
             return View(tranDau);
         }
 
@@ -121,8 +121,8 @@ namespace MidTest.Net.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DoiBongA"] = new SelectList(_context.DoiBong, "Id", "Id", tranDau.DoiBongA);
-            ViewData["DoiBongB"] = new SelectList(_context.DoiBong, "Id", "Id", tranDau.DoiBongB);
+            ViewData["DoiBongA"] = new SelectList(_context.DoiBong, "Id", "TenDoi", tranDau.DoiBongA);
+            ViewData["DoiBongB"] = new SelectList(_context.DoiBong, "Id", "TenDoi", tranDau.DoiBongB);
             return View(tranDau);
         }
 

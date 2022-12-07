@@ -1,12 +1,12 @@
 ﻿@model MidTest.Net.Data.TranDau
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Sửa thông tin trận đấu";
 }
 
-<h1>Edit</h1>
+<h1>Sửa</h1>
 
-<h4>TranDau</h4>
+<h4>Trận đấu</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -39,14 +39,14 @@
                 <span asp-validation-for="ThoiGian" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Lưu" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Trở lại danh sách</a>
 </div>
 
 @section Scripts {

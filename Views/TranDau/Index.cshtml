@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<MidTest.Net.Data.TranDau>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Danh sách trận đấu";
 }
 
-<h1>Index</h1>
+<h1>Danh sách trận đấu</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Thêm mới</a>
 </p>
 <table class="table">
     <thead>
@@ -43,15 +43,15 @@
                 @Html.DisplayFor(modelItem => item.ThoiGian)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DoiA.Id)
+                @Html.DisplayFor(modelItem => item.DoiA.TenDoi)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DoiB.Id)
+                @Html.DisplayFor(modelItem => item.DoiB.TenDoi)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Xoá</a>
             </td>
         </tr>
 }

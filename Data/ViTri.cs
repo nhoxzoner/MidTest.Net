@@ -1,6 +1,7 @@
 ﻿#nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -15,6 +16,7 @@ namespace MidTest.Net.Data
 
         [Key]
         public int Id { get; set; }
+        [DisplayName("Tên vị trí")]
         [StringLength(100)]
         public string TenViTri { get; set; }
 
