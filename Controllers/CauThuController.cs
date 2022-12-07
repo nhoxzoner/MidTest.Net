@@ -48,8 +48,8 @@ namespace MidTest.Net.Controllers
         // GET: CauThu/Create
         public IActionResult Create()
         {
-            ViewData["IdDoiBong"] = new SelectList(_context.DoiBong, "Id", "Id");
-            ViewData["IdViTri"] = new SelectList(_context.ViTri, "Id", "Id");
+            ViewData["IdDoiBong"] = new SelectList(_context.DoiBong, "Id", "TenDoi");
+            ViewData["IdViTri"] = new SelectList(_context.ViTri, "Id", "TenViTri");
             return View();
         }
 
@@ -66,8 +66,8 @@ namespace MidTest.Net.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdDoiBong"] = new SelectList(_context.DoiBong, "Id", "Id", cauThu.IdDoiBong);
-            ViewData["IdViTri"] = new SelectList(_context.ViTri, "Id", "Id", cauThu.IdViTri);
+            ViewData["IdDoiBong"] = new SelectList(_context.DoiBong, "Id", "TenDoi", cauThu.IdDoiBong);
+            ViewData["IdViTri"] = new SelectList(_context.ViTri, "Id", "TenViTri", cauThu.IdViTri);
             return View(cauThu);
         }
 
@@ -84,8 +84,8 @@ namespace MidTest.Net.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdDoiBong"] = new SelectList(_context.DoiBong, "Id", "Id", cauThu.IdDoiBong);
-            ViewData["IdViTri"] = new SelectList(_context.ViTri, "Id", "Id", cauThu.IdViTri);
+            ViewData["IdDoiBong"] = new SelectList(_context.DoiBong, "Id", "TenDoi", cauThu.IdDoiBong);
+            ViewData["IdViTri"] = new SelectList(_context.ViTri, "Id", "TenViTri", cauThu.IdViTri);
             return View(cauThu);
         }
 
@@ -121,8 +121,8 @@ namespace MidTest.Net.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdDoiBong"] = new SelectList(_context.DoiBong, "Id", "Id", cauThu.IdDoiBong);
-            ViewData["IdViTri"] = new SelectList(_context.ViTri, "Id", "Id", cauThu.IdViTri);
+            ViewData["IdDoiBong"] = new SelectList(_context.DoiBong, "Id", "TenDoi", cauThu.IdDoiBong);
+            ViewData["IdViTri"] = new SelectList(_context.ViTri, "Id", "TenViTri", cauThu.IdViTri);
             return View(cauThu);
         }
 
