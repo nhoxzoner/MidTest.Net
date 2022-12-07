@@ -1,10 +1,11 @@
-﻿@{
+﻿@using MidTest.Net.Data
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    @foreach(var vitri in ViewBag["ViTri"])
+    @foreach(var vitri in (List<ViTri>) ViewData["ViTri"])
     {
-        @vitri
+        @vitri.TenViTri
     }
 </div>

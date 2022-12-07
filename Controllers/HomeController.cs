@@ -24,7 +24,7 @@ namespace MidTest.Net.Controllers
         public IActionResult Index()
         {
             var dsViTri = _context.ViTri.ToList();
-            ViewBag["ViTri"] = dsViTri;
+            ViewData["ViTri"] = dsViTri;
             return View();
         }
 
