@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MidTest.Net.Data.DoiBong>
+
+@{
+    ViewData["Title"] = "Quản lý đội bóng";
+}
+
+<h1>Quản lý đội bóng</h1>
+
+<p>
+    <a asp-action="Create">Thêm mới đội bóng</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaDoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenDoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenQuocGia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoCauThu)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaDoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenDoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenQuocGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoCauThu)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Xoá</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

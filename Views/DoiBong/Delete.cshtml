@@ -1,0 +1,45 @@
+﻿@model MidTest.Net.Data.DoiBong
+
+@{
+    ViewData["Title"] = "Xoá đội bóng";
+}
+
+<h1>Xoá đội bóng</h1>
+
+<h3>Bạn muốn xoá đội bóng được chọn?</h3>
+<div>
+    <h4>DoiBong</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaDoi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaDoi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TenDoi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TenDoi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TenQuocGia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TenQuocGia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SoCauThu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SoCauThu)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Xoá" class="btn btn-danger" /> |
+        <a asp-action="Index">Trở lại danh sách</a>
+    </form>
+</div>

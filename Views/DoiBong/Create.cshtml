@@ -1,0 +1,48 @@
+﻿@model MidTest.Net.Data.DoiBong
+
+@{
+    ViewData["Title"] = "Thêm mới đội bóng";
+}
+
+<h1>Thêm mới đội bóng</h1>
+
+<h4>Đội bóng</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MaDoi" class="control-label"></label>
+                <input asp-for="MaDoi" class="form-control" />
+                <span asp-validation-for="MaDoi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenDoi" class="control-label"></label>
+                <input asp-for="TenDoi" class="form-control" />
+                <span asp-validation-for="TenDoi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenQuocGia" class="control-label"></label>
+                <input asp-for="TenQuocGia" class="form-control" />
+                <span asp-validation-for="TenQuocGia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SoCauThu" class="control-label"></label>
+                <input asp-for="SoCauThu" class="form-control" />
+                <span asp-validation-for="SoCauThu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Thêm mới" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Trở lại danh sách</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
