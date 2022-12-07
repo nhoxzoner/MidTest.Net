@@ -36,6 +36,8 @@ namespace MidTest.Net.Controllers
             var tranDau = await _context.TranDau
                 .Include(t => t.DoiA)
                 .Include(t => t.DoiB)
+                .Include(t => t.ChiTietTranDau)
+                .ThenInclude(x => x.CauThu)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (tranDau == null)
             {
